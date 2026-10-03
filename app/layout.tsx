@@ -1,0 +1,1 @@
+import"./globals.css";export const metadata={title:"Levy AI Studio",description:"Workspace multiagente"};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="pt-BR"><body>{children}</body></html>}
