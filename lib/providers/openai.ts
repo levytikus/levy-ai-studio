@@ -1,0 +1,2 @@
+import OpenAI from "openai";import{AIProvider}from"./types";
+export const openAIProvider:AIProvider={name:"openai",async generate(prompt,system="Você é um especialista colaborando com outros agentes."){const started=Date.now();const client=new OpenAI({apiKey:process.env.OPENAI_API_KEY});const response=await client.responses.create({model:process.env.OPENAI_MODEL||"gpt-5.6",instructions:system,input:prompt});return{provider:"openai",text:response.output_text,durationMs:Date.now()-started}}};
