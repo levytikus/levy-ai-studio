@@ -1,0 +1,2 @@
+import{GoogleGenAI}from"@google/genai";import{AIProvider}from"./types";
+export const geminiProvider:AIProvider={name:"gemini",async generate(prompt,system="Você é um especialista colaborando com outros agentes."){const started=Date.now();const ai=new GoogleGenAI({apiKey:process.env.GEMINI_API_KEY});const model=process.env.GEMINI_MODEL;if(!model)throw new Error("Defina GEMINI_MODEL.");const response=await ai.models.generateContent({model,contents:system+"\n\n"+prompt});return{provider:"gemini",text:response.text||"",durationMs:Date.now()-started}}};
