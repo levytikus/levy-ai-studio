@@ -1,1 +1,28 @@
-{"name":"levy-ai-studio","version":"0.1.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start"},"dependencies":{"@anthropic-ai/sdk":"latest","@google/genai":"latest","next":"latest","openai":"latest","react":"latest","react-dom":"latest"},"devDependencies":{"@types/node":"latest","@types/react":"latest","typescript":"latest"}}
+{
+  "name": "levy-ai-studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "@google/genai": "latest",
+    "@opennextjs/cloudflare": "latest",
+    "next": "latest",
+    "openai": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "typescript": "latest",
+    "wrangler": "latest"
+  }
+}
