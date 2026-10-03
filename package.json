@@ -1,0 +1,1 @@
+{"name":"levy-ai-studio","version":"0.1.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start"},"dependencies":{"@anthropic-ai/sdk":"latest","@google/genai":"latest","next":"latest","openai":"latest","react":"latest","react-dom":"latest"},"devDependencies":{"@types/node":"latest","@types/react":"latest","typescript":"latest"}}
